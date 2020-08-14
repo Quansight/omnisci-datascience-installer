@@ -4,9 +4,9 @@ company: OmniSci, Inc.
 
 keep_pkgs: True
 attempt_hardlinks: True
+ignore_duplicate_files: True
 install_in_dependency_order: True
 installer_type: pkg  # [osx]
-
 
 channels:
   - https://conda.anaconda.org/conda-forge
@@ -18,8 +18,9 @@ channels:
 specs:
   - intake >=0.5.3
   - intake-omnisci
+  - omnisci-pytools
+  - jupyter-jaeger
   - pandas <0.26
-  - pip
   - pymapd 0.24
   - python >=3.7
   - ibis-framework
