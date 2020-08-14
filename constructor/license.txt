@@ -1,0 +1,585 @@
+OmniSci End User License Agreement
+
+Last Updated:  21-Jul-2020
+
+This End User License Agreement ("Agreement") is a legal agreement between you
+or the company or legal entity you represent ("you," "your" and "yours") and
+OmniSci, Inc. ("OmniSci") for the use of the OmniSci Software (defined below).
+By Using (as defined below) the Software or otherwise assenting to this
+Agreement, you (a) acknowledge that you have read, understand and agree to the
+terms and conditions of this Agreement, and (b) represent that you have the
+legal authority to enter into this Agreement on your own behalf or, if
+applicable, on behalf of the legal entity you represent.
+
+IF YOU DO NOT AGREE WITH ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT OR
+DO NOT HAVE SUCH AUTHORITY, YOU MAY NOT USE THE SOFTWARE.
+
+1.	DEFINITIONS
+
+1.1	"Agreement" is defined in the preamble paragraph, above.
+
+1.2	"Authorized Hardware" means hardware on which you are authorized to Use the
+Software.
+
+1.3	"Authorized User" means an employee or agent who you authorize to use the
+Software.
+
+1.4	"Distributor Terms" means the agreements, terms, conditions, and policies
+of your Distributor, as applicable, governing your use of services provided by
+a Distributor - such as cloud computing or hosting services, or professional
+services - related to your use of the Software..
+
+1.5	"Confidential Information" is defined in Section 5.1.
+
+1.6	"Core Dumps" is defined in Section 3.3.
+
+1.7	"Diagnostic Data" is defined in Section 3.3.
+
+1.8	"Discloser" is defined in Section 5.1.
+
+1.9	"Distributor" means an authorized distributor of the Software through which
+you obtain your access to the Software. Distributors may be authorized
+resellers or distributors, including those providing related cloud computing
+services, such as Amazon Web Services, Google Cloud Platform, or Microsoft
+Azure.
+
+1.10	"Documentation" means any user manuals or any other documentation
+relating to the Software that OmniSci provides or makes available to you.
+
+1.11	"Expenses" is defined in Section 3.2.
+
+1.12	"Feedback" is defined in Section 2.5.
+
+1.13	"Fees" is defined in Section 4.1.
+
+1.14	"Initial Term" is defined in Section 6.1.
+
+1.15	"License Key" is defined in Section 2.1.
+
+1.16	"OmniSci" is defined in the preamble paragraph, above.
+
+1.17	"Order Form" means an ordering document of either OmniSci, a Distributor,
+or other authorized OmniSci distributor pursuant to which you obtain limited
+access to the Software. In all cases, the Order Form must be agreed to by you
+and OmniSci, a Distributor, or other authorized OmniSci distributor.
+
+1.18	"Personnel" is defined in Section 3.2.
+
+1.19	"Recipient" is defined in Section 5.1.
+
+1.20	"Renewal Term" is defined in Section 6.2.
+
+1.21	"Services" is defined in Section 3.2.
+
+1.22	"Software" means the OmniSci software products or services identified in
+an Order Form.
+
+1.23	"Software Warranty" is defined in Section 7.1.
+
+1.24	"Subscription Term" is defined in Section 6.2.
+
+1.25	"Support" is defined in Section 3.1.
+
+1.26	"Taxes" is defined in Section 4.2.
+
+1.27	"Third-Party License" is defined in Section 2.6.
+
+1.28	"Third-Party Software" is defined in Section 2.6.
+
+1.29	"Trial Software" is defined in Section 2.4.
+
+1.30	"Use" or "Using" means to install, load, run, execute, access, activate
+the processing capabilities of the Software and display the results thereof.
+
+1.31	"User Information" is defined in Section 10.6.
+
+1.32	"Warranty Period" is defined in Section 7.1.
+
+1.33	"You," "your" and "yours" are defined in the preamble paragraph, above.
+
+2.	LICENSE
+
+2.1	License Grant. Subject to your compliance with the terms and conditions of
+this Agreement, the applicable Order Form, and any applicable Distributor
+Terms, OmniSci hereby grants you a limited, non-exclusive, non-transferable,
+non-sublicensable license during the Subscription Term (defined below), solely
+for your internal business or research purposes, to (a) Use the Software, in
+object code form only, on Authorized Hardware, and (b) Use the Documentation as
+reasonably necessary to Use the Software. You may make a reasonable number of
+copies of the Software and Documentation for archival and back-up purposes
+only, provided that you include on each such copy all copyright or other
+proprietary notices contained on the Software and Documentation. All Software
+will be delivered by electronic means unless otherwise specified on the
+applicable Order Form. Software will be deemed delivered when it is first made
+available for your download or Use. The Software is licensed subject to
+limitations set out in the Order Form, including, as applicable and without
+limitation, specified quantity and capacity limitations, or restrictions on the
+number of Authorized Users. OmniSci may use a license key, activation code, or
+other technology (in any case, a "License Key") to activate the Software and
+permit its usage in accordance with the applicable term or license parameters.
+
+2.2	Restrictions. Except as expressly permitted hereunder, you will not (a)
+decompile, disassemble or reverse engineer the Software, except to the extent
+expressly permitted by applicable law notwithstanding a contractual prohibition
+to the contrary, (b) modify, publish, transmit, license, sublicense, assign,
+transfer, sell, grant a security interest in, distribute, reproduce, create
+derivative or collective works from the Software or the Documentation, (c)
+disclose, divulge, communicate, or allow access to the Software or
+Documentation to any person except your Authorized Users or other parties
+expressly authorized hereunder (such as your Distributor), (d) allow the
+Software to be used on any hardware other than the Authorized Hardware, (e)
+allow the Software to be used on an external commercial rental, time-sharing,
+or subscription basis or service bureau arrangement, (f) remove or modify any
+proprietary markings or any notice of OmniSci's or its licensors' proprietary
+rights included in the Software or Documentation, (g) publish a review of the
+Software, information regarding any bugs or defects in the Software, or the
+results of any benchmark tests run on the Software, in each case, without the
+prior written consent of OmniSci, (h) disable or circumvent the applicable
+License Key technology, or (i) permit or assist any third party in doing any of
+the foregoing.
+
+2.3	Ownership. The Software and Documentation are licensed, not sold. You
+acknowledge that (a) all right, title and interest in all copies of the
+Software and Documentation, and all intellectual and proprietary rights
+therein, are and will remain with OmniSci or its third-party licensors, (b) no
+right or interest in the Software or Documentation is conveyed other than the
+limited license granted by this Agreement, (c) the Software and Documentation
+are protected by the copyright laws of the United States and by international
+treaties, and (d) the Software and Documentation embody valuable proprietary
+information of OmniSci.
+
+2.4	Trial Software. OmniSci may, in its discretion, provide access to
+"pre-release" or "trial" software (collectively, "Trial Software"). Unless
+otherwise specified in the applicable Order Form (a) all Software is Trial
+Software, (b) You may only Use Trial Software on a non-production basis for no
+more than 30 days, and (c) OmniSci may terminate your license to Use such Trial
+Software at any time upon written notice. In addition, the following Sections
+of this Agreement do not apply to Trial Software: 3.1 (Support Services), 7.1
+(Limited Warranty), and 8.1 (Indemnity by OmniSci).
+
+2.5	Feedback. You may choose to provide OmniSci with suggestions, comments,
+ideas, corrections, improvements, feedback, or other information about the
+Software in either verbal or written form (collectively, "Feedback"). If you do
+provide Feedback to OmniSci, OmniSci may use and modify such Feedback in
+connection with any product or service or for any other purpose, without any
+obligations to you or restrictions of any kind.
+
+2.6	Third-Party Software. The Software may contain or be provided with certain
+third-party software licensed by its owners under its own license
+(collectively, the "Third-Party Software"). Third-Party Software is subject to
+the terms of the third-party software license accompanying or otherwise
+applicable to that Third-Party Software ("Third-Party License"). The
+Third-Party Licenses are set forth in the Documentation. The terms of the
+applicable Third-Party License will apply to the Third-Party Software
+independent of the terms of this Agreement. You may not Use any component
+contained in or provided with the Software on a standalone basis or to
+interoperate with any program(s) other than the Software.
+
+2.7	High Risk Activities. The Software is not designed or intended for use in
+medical, nuclear, aviation, navigation, military or other high-risk activities
+where failure of the Software could result in death, personal injury, and/or
+substantial property damage. You may not Use the Software any such purposes,
+and OmniSci and its licensors expressly disclaim and are released from any
+responsibility or liability for any and all damages that may be incurred due to
+the use of the Software in such applications.
+
+3.	SUPPORT
+
+3.1	Support Services. Provided you have no outstanding payments due and are
+otherwise in compliance with the terms and conditions of this Agreement,
+OmniSci will provide you with support for the Software during your Subscription
+Term as set forth on your Order Form ("Support"). Support will include
+answering technical questions and assisting with the basic operation of the
+Software. You will also have access to OmniSci's Community Forum where other
+users of the Software may offer tips, best practices, troubleshooting and
+informal training with respect to the Software. In addition, as part of Support
+and at no additional charge, OmniSci will make the latest updates of the
+Software to which you are entitled available to you.
+
+3.2	Professional Services. OmniSci may agree to provide certain professional
+services with respect to the Software ("Services") in addition to the standard
+support services described above. Any such Services and the applicable fees
+therefor will be the subject of a separate written agreement between you and
+OmniSci. In the absence of a separate written agreement governing the Services,
+the following terms shall apply. The fees for the Services will be as set forth
+on the applicable Order Form. In addition, you are responsible for all travel
+and living expenses ("Expenses") incurred by OmniSci's employees, agents, and
+contractors (collectively, "Personnel") while traveling to and from your
+facilities to perform Services. Unless otherwise agreed in the applicable Order
+Form, fees for Services and reasonable Expenses will be billed monthly, or
+after the conclusion of the Services. You must use reasonable efforts to (a)
+provide OmniSci's Personnel with such information, co-operation and support as
+may reasonably be required for OmniSci to provide the Services, (b) permit
+OmniSci's Personnel to access such of your systems, networks, premises and
+property as is necessary to perform the Services and ensure that OmniSci is
+granted sufficient authorization to use any third party systems, programs, or
+networks necessary to perform the Services, (c) ensure that all necessary
+consents, authorizations and licenses have been obtained so that OmniSci's
+provision of the Services does not breach any statutory or regulatory
+provisions (of whatever jurisdiction) relating to the use of and access to
+personal data, and (d) ensure the health and safety of OmniSci's Personnel
+engaged in providing the Services at your premises.
+
+3.3	Diagnostic Data. The Software may transmit diagnostic data to OmniSci
+relating to the performance of the Software, including, without limitation,
+system specifications and performance, capacity usage, system faults, and other
+information of a similar nature (collectively, "Diagnostic Data"). Diagnostic
+Data may be sent on a periodic basis and upon a failure or fault in the
+Software. In addition to the automatic transmission of Diagnostic Data, you may
+choose to provide additional data files ("Core Dumps") to OmniSci for technical
+analysis in the context or receiving support. Subject to confidentiality
+obligations, OmniSci may use the Core Dumps to provide support, troubleshoot
+the Software and to enhance, improve, and develop the Software and related
+products and services. Any use of the Core Dumps except for work with you will
+be in an anonymous and aggregated form that does not link such information to
+you or to any identifiable person.
+
+4.	FEES AND PAYMENT
+
+4.1	Fees. You will pay to OmniSci or your Distributor all fees for the Software
+as set forth on the applicable Order Form ("Fees") and in accordance with the
+payment terms set forth therein and any applicable Distributor Terms. If your
+Order Form is with OmniSci (a) all amounts not paid when due will accrue
+interest until paid at the lesser of 1.5% per month or the maximum rate allowed
+by applicable law, and (b) you will reimburse OmniSci for all costs incurred by
+OmniSci (included reasonable attorneys' fees) in collecting past due amounts.
+OmniSci or your Distributor may increase the Fees for any applicable Renewal
+Terms (defined below) upon written notice to you. Except as expressly set forth
+in this Agreement or any applicable Distributor Terms, all Fees are
+non-cancelable and non-refundable. OmniSci will invoice you in advance and
+otherwise in accordance with the relevant Order Form. Unless otherwise stated
+in the Order Form, invoiced charges are due net 30 days from the invoice date.
+You are responsible for providing complete and accurate billing and contact
+information and notifying OmniSci of any changes to such information.
+
+4.2	Taxes. The Fees and any other charges described in this Agreement do not
+include federal, state, or local sales, VAT, GST, foreign withholding, use,
+property, excise, service, or similar taxes ("Taxes"). You will (a) pay all
+such Taxes as required by applicable law, (b) cooperate with OmniSci or your
+Distributor by providing all information required to the calculation and
+invoicing of all applicable Taxes, and (c) provide a valid tax-exemption
+certificate for any Tax from which you claim exemption.
+
+4.3	Audit. OmniSci and its licensors will have the right to gain access to,
+examine and audit, during normal business hours upon reasonable prior written
+notice to you, all of your locations, computing resources, records, accounts
+and other information for purposes of determining your compliance with this
+Agreement. You agree to provide reasonable assistance and access to information
+in the course of any such audit. Any such audit will be at OmniSci's expense
+provided that, if an audit reveals that you have exceeded the scope and number
+of licenses or have otherwise breached this Agreement, in addition to acquiring
+additional licenses or otherwise curing such breach, you will reimburse OmniSci
+for the reasonable cost of the audit. OmniSci will also have the right to share
+the results of any such audit with our licensors.
+
+5.	CONFIDENTIAL INFORMATION
+
+5.1	As used herein, "Confidential Information" means all nonpublic information
+disclosed by a party, its affiliates and licensors (as the "Discloser") that is
+designated as confidential or that, given the nature of the information or
+circumstances surrounding its disclosure, should reasonably be understood to be
+confidential. Confidential Information includes, without limitation, (a)
+nonpublic information relating to ideas, features, functions, organization,
+structure, graphics, or user interfaces of the Software, and (b) performance
+benchmarks and other test results of the Software. Confidential Information
+does not include any information that the receiving party (as the "Recipient")
+can document (i) is or becomes publicly available without breach of this
+Agreement, (ii) was known to Recipient at the time of receipt from Discloser,
+(iii) is received from a third party that is not subject to an obligation of
+confidentiality or whose disclosure of such information is not in violation of
+applicable law, or (iv) is independently developed by Recipient without
+reference to Confidential Information. Recipient may use Confidential
+Information only in connection with performance under this Agreement. Recipient
+will take all reasonable measures to protect Confidential Information from
+unauthorized disclosure, dissemination or use using the same degree of care
+Recipient uses to protect its own confidential information of a similar nature,
+but in no event less than a reasonable degree of care.
+
+6.	TERM AND TERMINATION
+
+6.1	Term. This Agreement will commence as of the effective date of the
+applicable Order Form, and subject to earlier termination under this Section 6,
+will continue in effect for the term set forth in the Order Form (the "Initial
+Term"). If no Subscription Term is specified in the Order Form, the Initial
+Term will be for 1 year.
+
+6.2	Renewal Terms. Unless otherwise provided in an Order Form, subscriptions
+will automatically renew for successive annual terms (each, a "Renewal Term,"
+and together with the Initial Term, the "Subscription Term") unless either
+party provides prior written notice of non-renewal to the other party at least
+30 days prior to the end of the then-current Initial Term or Renewal Term, as
+applicable. The Subscription Term may not be cancelled in whole or in part
+during any subscription period. Subscription Fees for Renewal Terms are subject
+to increase based upon prevailing rates at the time of renewal.
+
+6.3	Termination. Either party will have the right to terminate this Agreement
+upon written notice to the other party, in the event that the other party (a)
+breaches any material terms or obligations under this Agreement and fails to
+cure such breach within 30 days after notice thereof, or (b) dissolves, is
+declared insolvent or bankrupt, makes an assignment for the benefit of
+creditors, has a receiver appointed, or is the subject of any proceeding under
+any bankruptcy or insolvency laws, which proceeding, if initiated against such
+party, is not dismissed within 30 days. If your Order Form is with OmniSci and
+you terminate this Agreement for an uncured material breach by OmniSci, OmniSci
+will provide you a prorated refund of any pre-paid Fees for the remainder of
+your Subscription Term, provided that such refund is OmniSci's sole and
+exclusive obligation and your sole and exclusive remedy for any such material
+breach by OmniSci. This Agreement will automatically terminate in the event
+that you violate Sections 2.1, 2.2, 2.7, or 5. You may terminate this Agreement
+and your Use of the Software at any time for convenience with or without notice
+to OmniSci, though you will not be entitled to a refund of any pre-paid Fees or
+relieved of any obligation to pay Fees as set out in an Order Form.
+
+6.4	Termination by Your Distributor. You acknowledge that your Distributor may
+have the right to suspend or terminate your access to the Software pursuant to
+the Distributor Terms, which may also terminate your Use of the Software.
+OmniSci will not be obligated to provide you with or otherwise be liable for
+any refund in such event, including any Fees you may have pre-paid for the
+Software.
+
+6.5	Effect of Termination. Upon any termination of this Agreement, you will (a)
+immediately cease all Use of the Software and Documentation, (b) return to
+OmniSci, destroy or erase all copies (electronic or otherwise) of the Software,
+Documentation, and any Confidential Information you may have received from
+OmniSci, and (c) within 10 days of such termination, furnish written notice of
+such return, destruction or erasure to OmniSci.
+
+6.6	Survival. The following sections will survive any termination of this
+Agreement: 1, 2.3, 4.1 and 4.2 (solely with respect to any Fees and Taxes that
+remain outstanding as of the effective date of termination) 4.3, 5, 6.5, 6.6,
+7.3, 9, and 10.
+
+7.	WARRANTIES AND DISCLAIMER
+
+7.1	Mutual Warranties. Each party hereby warrants to the other that: (a) it has
+the authority to enter into this Agreement, to grant the rights granted by it
+under this Agreement, and to perform its obligations under this Agreement, (b)
+it has provided accurate, complete, and truthful information on the Order Form,
+and (c) it will comply with all applicable laws and regulations as they apply
+to each party's rights obligations under the Agreement.
+
+7.2	Limited Software Warranty. OmniSci warrants that for a period of 90 days
+from the start of your Initial Term (the "Warranty Period") the Software will
+function substantially in accordance with the Documentation (the "Software
+Warranty"). In the event that you notify OmniSci of a reproducible breach of
+the Software Warranty during the Warranty Period, OmniSci will, at its option
+and expense and as its sole and exclusive obligation and your sole and
+exclusive remedy for such breach (a) modify the Software so that it conforms to
+the Software Warranty, (b) replace the Software with other software of
+substantially similar functionality, or (c) if neither of the foregoing options
+are commercially practicable as determined in OmniSci's sole discretion,
+terminate this Agreement and, if your Order Form is with OmniSci, provide you a
+prorated refund of any pre-paid Fees for the remainder of your Initial Term.
+OmniSci will not be responsible for any breaches of the Software Warranty
+resulting from (i) the Use of the Software not in accordance with the
+Documentation, including Use in combination with any other products or services
+not contemplated by the Documentation, (ii) causes external to the Software,
+such as problems with any other software, hardware, network or other
+infrastructure with which the Software is used, including any cloud or hosting
+services, (iii) improper or negligent installation, configuration or Use or
+unauthorized Use of the Software, or (iv) Software which has been altered or
+modified by anyone other than OmniSci.
+
+7.3	Disclaimer. EXCEPT FOR THE EXPRESS WARRANTY SET FORTH IN SECTION 7.2,
+ABOVE, THE SOFTWARE IS PROVIDED "AS IS", AND OMNISCI AND ITS LICENSORS MAKE NO
+OTHER REPRESENTATIONS OR WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY OR
+OTHERWISE, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT,
+ALL OF WHICH ARE HEREBY EXCLUDED AND DISCLAIMED. WITHOUT LIMITING THE
+FOREGOING, OMNISCI DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR
+REQUIREMENTS, THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED, SECURE
+OR ERROR FREE, OR THAT ALL DEFECTS IN THE SOFTWARE CAN OR WILL BE CORRECTED.
+
+8.	INDEMNITY
+
+8.1	By OmniSci. Except as set forth in Section 8.2, OmniSci will defend at its
+expense any action brought against you to the extent that it is based on a
+claim that the Software, when Used in accordance with the Documentation and the
+terms and conditions of this Agreement, infringes a United States patent,
+copyright or trade secret of any third party, and OmniSci will pay any costs,
+damages and reasonable attorneys' fees finally awarded against you in, or
+payable in settlement of, such action which are directly attributable to such
+claim, provided that (a) you notify OmniSci promptly in writing promptly of the
+claim, (b) you permit OmniSci to assume sole control of the defense, compromise
+or settlement of the claim, and (c) you provide to OmniSci reasonable
+cooperation, information and assistance in connection therewith. If a final
+injunction is obtained against your use of the Software by reason of
+infringement, or if in OmniSci's opinion the Software is likely to become the
+subject of a successful claim of such infringement, OmniSci may, at its option
+and expense, (i) procure for you the right to continue Using the Software, (ii)
+modify the Software so that is non-infringing, (iii) replace the Software with
+other software of substantially similar functionality. In the event none of the
+foregoing options are commercially practicable as determined in OmniSci's sole
+discretion, OmniSci will terminate this Agreement and, if your Order Form is
+with OmniSci, provide you a prorated refund of any pre-paid Fees for the
+remainder of your Subscription Term. This Section 8.1 states OmniSci's sole and
+exclusive obligation, and your sole and exclusive remedy, with respect to any
+claim that the Software infringes the intellectual property rights of any third
+party.
+
+8.2	By You. OmniSci will have no liability to you, and you will, on the terms
+set forth above, defend and indemnify OmniSci and its licensors against claims
+of infringement based on (a) Use of the Software not in accordance with the
+Documentation or in violation of the terms and conditions of this Agreement,
+(b) the Use or combination of the Software with any other software or hardware
+not provided by OmniSci, if such infringement would not have occurred but for
+such Use or combination, (c) any modification of the Software by anyone other
+than OmniSci, (d) the Use of other than the most current version of the
+Software, if such version was made available by OmniSci for no additional fees
+with notice that such version was being provided in order to avoid an alleged
+or potential infringement, or (e) claims of infringement of intellectual
+property rights of you or your affiliates. You will also defend, indemnify and
+hold OmniSci and its licensors harmless from and against any claims, damages,
+losses, liabilities, costs, and expenses (including reasonable attorneys' fees)
+arising out of or relating to your breach of this Agreement, violation of any
+applicable law, your breach of any applicable Distributor Terms, or any misuse
+of the Software or violation of OmniSci's or its licensors' rights therein by
+your Distributor.
+
+9.	LIMITATION OF LIABILITY
+
+9.1	IN NO EVENT WILL OMNISCI OR ITS LICENSORS BE LIABLE TO YOU OR ANY THIRD
+PARTY FOR LOSS OF PROFITS, GOODWILL, USE OF DATA, OR FOR ANY INDIRECT,
+INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES. OMNISCI'S AND ITS LICENSORS' TOTAL AGGREGATE
+LIABILITY UNDER THIS AGREEMENT, WHETHER IN CONTRACT, TORT, OR OTHERWISE, WILL
+NOT EXCEED THE SUBSCRIPTION FEES ACTUALLY PAID BY YOU AND RECEIVED BY OMNISCI
+IN THE 12 MONTHS PRECEDING THE EVENT THAT GAVE RISE TO LIABILITY.
+
+10.	MISCELLANEOUS
+
+10.1	Assignment. You may not delegate any of your obligations under this
+Agreement, or assign or transfer this Agreement or any of your rights
+hereunder, whether by operation of law or otherwise, without the prior written
+consent of OmniSci. A change of control involving you will constitute an
+assignment for purposes of the foregoing restriction. Any delegation,
+assignment or transfer of this Agreement in violation of this Section 10.1 will
+be void and of no force and effect and a material breach of this Agreement.
+OmniSci may freely assign or transfer this Agreement. Subject to the foregoing,
+this Agreement will be binding upon, and inure to the benefit of the parties
+and their respective successors and assigns.
+
+10.2	Compliance with Laws. You will comply with all applicable laws and
+regulations relating to your Use of the Software, including without limitation,
+those relating to export and import, privacy, and personal data protection.
+
+10.3	Entire Agreement. This Agreement and any applicable Order Forms set forth
+the complete understanding between you and OmniSci with respect to the subject
+matter hereof and supersedes all prior understandings and communications
+relating thereto. No term or condition of a purchase order or other document
+you submit to OmniSci which is different from, inconsistent with, or in
+addition to the terms and conditions set forth herein will be binding upon
+OmniSci. To the extent that this document may constitute an acceptance, this
+acceptance is expressly conditioned on your assent to the terms and conditions
+set forth herein. Notwithstanding the foregoing, if you have entered into a
+separate written agreement with OmniSci for Use of the Software or the receipt
+of Services, the terms and conditions of such other agreement shall prevail
+over any conflicting terms or conditions in this Agreement.
+
+10.4	Export Control. You may not Use or otherwise export or reexport the
+Software except as authorized by United States law and the laws of the
+jurisdiction in which the Software was obtained. In particular, but without
+limitation, the Software may not be exported or reexported (a) into any U.S.
+embargoed countries, or (b) to anyone on the U.S. Treasury Department's list of
+Specially Designated Nationals or the U.S. Department of Commerce Denied
+Person's List or Entity List. By Using the Software, you represent and warrant
+that you are not located in any such country or on any such list. You also
+agree that you will not Use the Software for any purposes prohibited by United
+States law, including, without limitation, the development, design,
+manufacture, or production of missiles, nuclear, chemical or biological
+weapons.
+
+10.5	Anti-Corruption. You must comply with all anti-corruption and
+anti-bribery laws (including, without limitation, the US Foreign Corrupt
+Practices Act, the UK Bribery Act and Proceeds of Crime Act, and commercial
+bribery laws). You may not offer, pay, promise or authorize any direct or
+indirect payments of anything of value for the purpose of obtaining business to
+any government official (including any person holding an executive,
+legislative, judicial or administrative office, whether elected or appointed,
+or any official or employee of any public international organization, such as
+the United Nations or World Bank, or any person acting in any official capacity
+for or on behalf of such government, public enterprise or state-owned
+business), any political party or party official, any political candidate or to
+any person or entity whom you know or should know will give part of the
+payments to any of the previously mentioned categories of people.
+
+10.6	User Information. To install or activate the Software, certain
+machine-specific information as well as personal information about you ("User
+Information") may be sent to OmniSci at the time of activation or periodically
+thereafter. User Information may include but is not limited to email address,
+username, software identification numbers, MAC addresses, UUIDs, IP addresses,
+hardware or operating system identification numbers. OmniSci may use Licensed
+User Information for the purposes of verifying compliance with this Agreement,
+and otherwise as required by law, but OmniSci will otherwise treat any personal
+information elements of the User Information as your Confidential Information
+pursuant to Section 5 (Confidential Information). OmniSci will process User
+Information in accordance with the OmniSci Privacy Policy at
+https://www.omnisci.com/privacy. That Privacy Policy applies to your use of the
+Software and these terms as if fully set out in this Agreement.
+
+10.7	Force Majeure. Neither party will be responsible for any failure to
+perform its obligations under this Agreement (other than obligations to pay
+money) caused by an event beyond its reasonable control, including but not
+limited to, wars, riots, labor strikes, natural disasters, the infrastructure
+of the Internet, or any law, regulation, ordinance or other act or order of any
+court, government or governmental agency.
+
+10.8	Governing Law; Disputes. This Agreement is governed and will be construed
+by the laws of the State of California, excluding (a) that body of law known as
+conflicts of law, (b) the Uniform Computer Information Transactions Act, and
+(c) the United Nations Convention on Contracts for the Sale of Goods. Each
+party to this Agreement irrevocably submits to the exclusive jurisdiction of
+the state courts located in San Francisco County, California (or, if there is
+federal jurisdiction, the United Stated District Court for the Northern
+District of California) for the determination of any action arising out of or
+in connection with this Agreement. Notwithstanding the foregoing, OmniSci may
+commence appropriate legal action in any jurisdiction to protect its Products
+or Confidential Information.
+
+10.9	Government End Users. The Software and Documentation are "Commercial
+Items", as that term is defined at 48 C.F.R. 2.101, consisting of "Commercial
+Computer Software" and "Commercial Computer Software Documentation", as such
+terms are used in 48 C.F.R. 12.tw2 or 48 C.F.R. 227.7202, as applicable.
+Consistent with 48 C.F.R. 12.212 or 48 C.F.R. 227.7202-1 through 227.7202-4, as
+applicable, the Commercial Computer Software and Commercial Computer Software
+Documentation are being licensed to U.S. Government end users and U.S.
+Government contractors (a) only as Commercial Items and (b) with only those
+rights as are granted to all other end users pursuant to the terms and
+conditions herein.
+
+10.10	Modification; Waiver. This Agreement may not be modified or amended
+except pursuant to a written instrument signed by both parties. The waiver by
+either party of a breach of any provision hereof will not be construed as a
+waiver of any succeeding breach of the same or any other provision, nor will
+any delay or omission on the part of such party to avail itself of any right,
+power or privilege that it has or may have hereunder operate as a waiver of any
+right, power or privilege.
+
+10.11	Publicity. OmniSci may include your name and logo on its customer lists
+and reference the fact that you are a customer of OmniSci. However, neither
+party may issue a press release regarding this Agreement without the other
+party's prior written approval (which will not be unreasonably withheld or
+delayed).
+
+10.12	Notices. Notices in connection with this Agreement must be in writing and
+either delivered in person or by recognized commercial courier or certified
+mail, postage and fees prepaid, return receipt requested, and addressed (a) if
+to OmniSci, to OmniSci, Inc., 100 Montgomery Street, 5th Floor, San Francisco,
+California 94104 USA, Attention: Legal Department, and (b) if to you, to the
+address set forth on the applicable Order Form, or to such other address as you
+have specified by notice hereunder. Notices will be deemed effective when
+received or, if delivery is refused, when delivery is attempted.
+
+10.13	Relationship of Parties. OmniSci and you are independent contractors, and
+neither party, nor any of their respective affiliates, is an agent of the other
+for any purpose or has the authority to bind the other.
+
+10.14	Severability. In the event that any provision of this Agreement is for
+any reason held invalid, illegal or unenforceable in any respect by a court of
+competent jurisdiction, to such extent such provision will be deemed null and
+void and severed from this Agreement, and the remainder hereof will remain in
+full force and effect.
+
+
+
+[END OF EULA TERMS]
