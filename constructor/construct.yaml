@@ -17,7 +17,7 @@ license_file: license.txt
 specs:
   - intake >=0.5.3
   - intake-omnisci
-  - omnisci-pytools
+  #- omnisci-pytools
   - jupyter-jaeger
   - pandas <0.26
   - pymapd 0.24
