@@ -20,7 +20,7 @@ specs:
   #- omnisci-pytools
   - jupyter-jaeger
   - pandas <0.26
-  - pymapd 0.24
+  - pymapd
   - python >=3.7
   - ibis-framework
   - jupyterlab >=2.2
