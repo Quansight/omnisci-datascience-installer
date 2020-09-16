@@ -6,7 +6,8 @@ keep_pkgs: True
 attempt_hardlinks: True
 ignore_duplicate_files: True
 install_in_dependency_order: True
-installer_type: sh  # [osx]
+#installer_type: sh  # [osx]
+installer_type: pkg  # [osx]
 
 channels:
   - https://conda.anaconda.org/conda-forge
@@ -24,3 +25,5 @@ specs:
   - python >=3.7
   - ibis-framework
   - jupyterlab >=2.2
+  # needed for pkg building
+  - conda
