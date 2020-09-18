@@ -1,6 +1,7 @@
 # custom
 *.pkg
 omni*.sh
+conda.exe
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
