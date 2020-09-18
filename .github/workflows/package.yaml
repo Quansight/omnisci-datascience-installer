@@ -1,0 +1,45 @@
+name: packaging
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  macos:
+
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    env:
+      PYTHON_VERSION: ${{ matrix.python-version }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: configure
+      shell: bash -l {0}
+      run: |
+        ulimit -S -n 204800
+        sudo sysctl -w kern.maxfiles=204800
+        sudo sysctl -w kern.maxfilesperproc=245670
+
+    - uses: conda-incubator/setup-miniconda@v1
+      with:
+        auto-update-conda: true
+        python-version: ${{ matrix.python-version }}
+        activate-environment: omnisci-ds-installer
+        channels: conda-forge
+
+    - name: install dependencies
+      shell: bash -l {0}
+      run: |
+        conda install constructor
+        wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
+
+    - name: run constructor
+      shell: bash -l {0}
+      run: constructor --conda-exe conda.exe constructor/
