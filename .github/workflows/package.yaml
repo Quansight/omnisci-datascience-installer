@@ -3,6 +3,7 @@ name: packaging
 on:
   push:
     branches: [ master ]
+    tags: ['*']
   pull_request:
     branches: [ master ]
 
@@ -43,3 +44,26 @@ jobs:
     - name: run constructor
       shell: bash -l {0}
       run: constructor --conda-exe conda.exe constructor/
+
+    - name: get package name 
+      id: package_name
+      run: |
+        PACK_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
+        echo "::set-output name=filename::$PACK_NAME"
+
+    - name: create release
+      id: create_release
+      if: startsWith(github.ref, 'refs/tags/v')
+      uses: ncipollo/release-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        allowUpdates: true
+        replacesArtifacts: true
+        tag: ${{ github.event.release.tag_name }}
+        name: Release ${{ github.event.release.tag_name }}
+        commit: master
+        artifacts: ${{ steps.package_name.outputs.filename }}
+        artifactContentType: application/octet-stream
+        body: Release ${{ github.event.release.tag_name }}
+        token: ${{ secrets.GITHUB_TOKEN }}

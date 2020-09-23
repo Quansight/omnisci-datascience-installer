@@ -11,6 +11,15 @@ There are a couple of things to do to get started here.
 conda install constructor
 ```
 
+Also, you can install the dependencies from the environment-dev.yml file:
+
+```sh
+conda env create -n omnisci-ds-installer --file environment-dev.yml
+```
+
+This command creates an environment called `omnisci-ds-installer` (you can use
+another name if you want) and installs the packages listed in `environment-dev.yml`.
+
 2. Second, grab a copy of conda-standalone that you want to use.
    It is sometimes the case (especially on Windows) that the versions of
    conda-standalone that come when you install constructor (from step 1)
@@ -52,3 +61,15 @@ the `installer_type` key to have a value of `pkg` or `sh` depending on what you 
 ## Gotchas
 
 The pkg installer seems to need to have `conda` itself listed as a spec right now.
+
+## Releasing
+
+For releasing, after the PR is merged, create a tag with the last commit from master and 
+push it to the repository, for example:
+
+```sh
+git fetch upstream
+git checkout upstream/master
+git tag v0.0.3 -m "Release v0.0.3"
+git push upstream v0.0.3
+```
