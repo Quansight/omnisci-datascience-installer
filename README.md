@@ -70,6 +70,6 @@ push it to the repository, for example:
 ```sh
 git fetch upstream
 git checkout upstream/master
-git tag v0.0.3 -m "Release v0.0.3"
-git push upstream v0.0.3
+rever check
+rever 0.0.3
 ```
