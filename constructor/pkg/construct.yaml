@@ -1,0 +1,28 @@
+name: omnisci
+version: 0.0.2
+company: OmniSci, Inc.
+
+keep_pkgs: True
+attempt_hardlinks: True
+ignore_duplicate_files: True
+install_in_dependency_order: True
+installer_type: pkg  # [osx]
+
+channels:
+  - https://conda.anaconda.org/conda-forge
+  - http://repo.anaconda.com/pkgs/main/
+
+license_file: ../license.txt
+
+specs:
+  - intake >=0.5.3
+  - intake-omnisci
+  - omnisci-pytools
+  - jupyter-jaeger
+  - pandas <0.26
+  - pymapd
+  - python >=3.7
+  - ibis-framework
+  - jupyterlab >=2.2
+  # needed for pkg building
+  - conda
