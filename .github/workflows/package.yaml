@@ -41,15 +41,21 @@ jobs:
         conda install constructor
         wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
 
-    - name: run constructor
+    - name: run constructor for pkg
+      id: pkg_name
       shell: bash -l {0}
-      run: constructor --conda-exe conda.exe constructor/
-
-    - name: get package name 
-      id: package_name
       run: |
-        PACK_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
-        echo "::set-output name=filename::$PACK_NAME"
+        constructor --conda-exe conda.exe constructor/pkg
+        PKG_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
+        echo "::set-output name=filename::$PKG_NAME"
+
+    - name: run constructor for sh
+      id: sh_name
+      shell: bash -l {0}
+      run: |
+        constructor --conda-exe conda.exe constructor/sh
+        SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
+        echo "::set-output name=filename::$SH_NAME"
 
     - name: create release
       id: create_release
@@ -63,7 +69,7 @@ jobs:
         tag: ${{ github.event.release.tag_name }}
         name: Release ${{ github.event.release.tag_name }}
         commit: master
-        artifacts: ${{ steps.package_name.outputs.filename }}
+        artifacts: ${{ steps.pkg_name.outputs.filename }},${{ steps.sh_name.outputs.filename }}
         artifactContentType: application/octet-stream
         body: Release ${{ github.event.release.tag_name }}
         token: ${{ secrets.GITHUB_TOKEN }}

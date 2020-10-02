@@ -6,14 +6,13 @@ keep_pkgs: True
 attempt_hardlinks: True
 ignore_duplicate_files: True
 install_in_dependency_order: True
-#installer_type: sh  # [osx]
-installer_type: pkg  # [osx]
+installer_type: sh  # [osx]
 
 channels:
   - https://conda.anaconda.org/conda-forge
   - http://repo.anaconda.com/pkgs/main/
 
-license_file: license.txt
+license_file: ../license.txt
 
 specs:
   - intake >=0.5.3
