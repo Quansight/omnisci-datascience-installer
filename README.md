@@ -158,3 +158,49 @@ You have successfully installed the OmniSci Datascience Installer on your Mac in
 
 
 ## Using the OmniSci Mac Preview
+
+If you already have [Mac Preview](https://www.omnisci.com/mac-preview) and you want to connect to that from your jupyter-lab notebook, first open your jupyter-lab instance. From the command line, go to the folder you want as root for your notebooks (or use --notebook-dir with the path of your desired folder) and call the `jupyter-lab` command, for example:
+
+```sh
+# $HOME is a variable that points to the path of you user folder
+mkdir $HOME/notebooks
+cd $HOME/notebooks
+jupyter-lab
+```
+
+To create a new notebook for Python code, click on the Python 3 icon inside `Launcher` page. If `Launcher` page is not showing, click first on the `+` icon on ther left corner near the menu bar:
+
+![jupyter-lab lancher page](https://user-images.githubusercontent.com/5209757/95106626-bd2d6880-0706-11eb-8d61-b76cbdf5b253.png)
+
+OmniSci Data Science installer installs automatically, among other packages, jupyterlab, ibis and pymapd. As default, OmniSci Mac Preview server listen to the port 16274. So, let's try to connect to the OmniSci Mac Preview and get the name of all tables available there!
+
+Add the following code at the first cell of you notebook:
+
+```sh
+# import ibis-framework package
+import ibis
+# connect to OmniSci Mac Preview
+client = ibis.omniscidb.connect(
+    host="localhost",
+    port="16274",
+    database="omnisci", 
+    user="admin",
+    password="HyperInteractive", 
+)
+# get the name of all tables available
+client.list_tables()
+```
+
+Now, run that and check if it returns the follow result:
+
+```sh
+['omnisci_states',
+ 'omnisci_counties',
+ 'omnisci_countries',
+ 'flights_2008_7M',
+ 'us_counties_covid_cases_enriched']
+```
+
+If it is not working, check if you did all the previous step according to the instructions. If the problem persists, we encourage you to open an [issue](https://github.com/Quansight/omnisci-datascience-installer/issues) with all the details about your problem.
+
+If it worked, congratulations! Your environment is working properly and you can start to play with OmniSci Data Science tools by yourself! Have fun!
