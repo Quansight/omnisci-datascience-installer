@@ -156,6 +156,15 @@ You have successfully installed the OmniSci Datascience Installer on your Mac in
 
 **If you have the Anaconda Navigator GUI**
 
+If you have already Anaconda Navigator GUI, to install the OmniSci Data Science stack, we recommend you to import a new environment from this [example](https://github.com/Quansight/omnisci-examples). You can download all the repository or you can just download the environment.yml file. For now, we will download just the environment file, but feel free to download all the repository and play with the examples there:
+
+```sh
+wget https://raw.githubusercontent.com/Quansight/omnisci-examples/master/environment.yml -O /tmp/environment.yml
+```
+
+Now, open your Anaconda Navigator, and click on the `Environments` menu. To create a new environment from the file you just download, click on the `Import`. It will open a window requesting information about the new environment. Set the name for your new environment, select the environment file located at `/tmp/environment.yml` and click on the `Import` button.
+
+Now you can access the OmniSci Data Science stack using the new environment you just created!
 
 ## Using the OmniSci Mac Preview
 
