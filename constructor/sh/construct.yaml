@@ -24,5 +24,3 @@ specs:
   - python >=3.7
   - ibis-framework
   - jupyterlab >=2.2
-  # needed for pkg building
-  - conda
