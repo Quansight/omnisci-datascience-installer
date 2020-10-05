@@ -177,7 +177,7 @@ cd $HOME/notebooks
 jupyter-lab
 ```
 
-To create a new notebook for Python code, click on the Python 3 icon inside `Launcher` page. If `Launcher` page is not showing, click first on the `+` icon on ther left corner near the menu bar:
+To create a new notebook for Python code, click on the Python 3 icon inside `Launcher` page. If `Launcher` page is not showing, click first on the `+` icon on the left corner near the menu bar:
 
 ![jupyter-lab lancher page](https://user-images.githubusercontent.com/5209757/95106626-bd2d6880-0706-11eb-8d61-b76cbdf5b253.png)
 
