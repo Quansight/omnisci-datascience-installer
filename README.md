@@ -172,7 +172,7 @@ If you already have [Mac Preview](https://www.omnisci.com/mac-preview) and you w
 
 ```sh
 # $HOME is a variable that points to the path of you user folder
-mkdir $HOME/notebooks
+mkdir -p $HOME/notebooks
 cd $HOME/notebooks
 jupyter-lab
 ```
