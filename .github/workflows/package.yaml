@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [3.7]
 
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
@@ -56,6 +56,15 @@ jobs:
         constructor --conda-exe conda.exe constructor/sh
         SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
         echo "::set-output name=filename::$SH_NAME"
+
+    - name: test shell package
+      run: |
+        bash ${{ steps.sh_name.outputs.filename }} -b
+        /Users/runner/omnisci/bin/python -c "import ibis.omniscidb"
+        /Users/runner/omnisci/bin/python -c "import pymapd"
+        /Users/runner/omnisci/bin/python -c "import intake"
+        /Users/runner/omnisci/bin/python -c "import altair"
+        /Users/runner/omnisci/bin/python -c "import ibis_vega_transform"
 
     - name: create release
       id: create_release
