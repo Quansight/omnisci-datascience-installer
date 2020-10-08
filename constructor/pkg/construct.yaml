@@ -21,7 +21,7 @@ specs:
   - jupyter-jaeger
   - pandas <0.26
   - pymapd
-  - pyarrow 0.15.0
+  - pyarrow >=0.15.0
   - python >=3.7
   - ibis-framework
   - jupyterlab >=2.2
