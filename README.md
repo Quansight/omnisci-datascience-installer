@@ -91,7 +91,7 @@ IMPORTANT: If you already have conda installed, this will overwrite the conda pa
 The OmniSci Data Science Installer can be installed using a shell script if you have no conda on your machine. The shell installers for each version of the package are available on the GitHub  [releases page](https://github.com/Quansight/omnisci-datascience-installer/releases/). For each release, you will find both a MacOS package (`pkg`) and a shell (`sh`) installer. 
 
 
-NOTE: The MacOS package (`pkg`) installer is still under tests.
+NOTE: The MacOS package (`pkg`) installer is still being tested.
 
 To run the shell installer:
 
