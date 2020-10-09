@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-$PREFIX/bin/python -m pip install ibis-vega-transform
+export OLD_PATH=$PREFIX
+export PATH=$PREFIX/bin:$PATH
 
-$PREFIX/bin/jupyter labextension install ibis-vega-transform
-$PREFIX/bin/jupyter labextension install @pyviz/jupyterlab_pyviz
+python -m pip install ibis-vega-transform
+
+jupyter labextension install ibis-vega-transform
+jupyter labextension install @pyviz/jupyterlab_pyviz
+
+export PATH=$OLD_PATH
