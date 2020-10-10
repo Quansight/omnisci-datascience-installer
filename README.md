@@ -86,12 +86,12 @@ OmniSci Data Science package installs OmniSci stack that includes intake/intake-
 Follow the instructions below for your current setup:
 
 **If you have no conda installed on your machine**  
-IMPORTANT: If you already have conda installed, this will overwrite the conda path in your bash profile!! Follow other instructions instead.
+IMPORTANT: If you already have conda installed, this will overwrite the conda path in your bash profile! If you really want to run the following instructions, you probably want to create first a backup of your configuration files (for example, `$HOME/.bashrc`, `$HOME/.bash_profile`, `$HOME/.zshrc`, according to your environment). Otherwise, check the instructions in the sections below.
 
 The OmniSci Data Science Installer can be installed using a shell script if you have no conda on your machine. The shell installers for each version of the package are available on the GitHub  [releases page](https://github.com/Quansight/omnisci-datascience-installer/releases/). For each release, you will find both a MacOS package (`pkg`) and a shell (`sh`) installer. 
 
 
-NOTE: The MacOS package installer is not ready ???
+NOTE: The MacOS package (`pkg`) installer is still being tested.
 
 To run the shell installer:
 
