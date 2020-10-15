@@ -1,6 +1,6 @@
 channels:
+  - quansight/label/omnisci
   - conda-forge
-  - default
 dependencies:
   - intake >=0.5.3
   - intake-omnisci
