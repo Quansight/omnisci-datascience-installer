@@ -33,7 +33,7 @@ jobs:
         auto-update-conda: true
         python-version: ${{ matrix.python-version }}
         activate-environment: omnisci-ds-installer
-        channels: quansight/label/omnisci,conda-forge,
+        channels: quansight/label/omnisci,conda-forge
 
     - name: install dependencies
       shell: bash -l {0}
