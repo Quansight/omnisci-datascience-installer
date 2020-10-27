@@ -25,7 +25,7 @@ specs:
   - pydot
   - pymapd
   - pyarrow >=0.15.0
-  - python >=3.7
+  - python 3.7  # doesn't work yet for python 3.8
   - ibis-framework
   - jupyterlab >=2.2
   # local depencencies
