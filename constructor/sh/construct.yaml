@@ -24,7 +24,7 @@ specs:
   - pandas <0.26
   - pydot
   - pymapd
-  - pyarrow >=0.15.0
+  - pyarrow 0.15
   - python >=3.7
   - jupyterlab >=2.2
   # local depencencies
