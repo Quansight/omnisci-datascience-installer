@@ -51,7 +51,7 @@ sudo sysctl -w kern.maxfilesperproc=245670
 Now you may run constructor with the following command:
 
 ```sh
-constructor --conda-exe /path/to/conda.exe constructor/
+constructor --conda-exe /path/to/conda.exe constructor/sh
 ```
 
 Be aware that, on Mac, whether you are creating a sh-based or pkg-based installer
@@ -60,12 +60,13 @@ the `installer_type` key to have a value of `pkg` or `sh` depending on what you 
 
 ## Gotchas
 
-The pkg installer seems to need to have `conda` itself listed as a spec right now.
+The `pkg` and `sh` installer seem to need to have `conda` itself listed as a spec.
+Without that when it tries to run `conda init` it will fail.
 
 
 ## Releasing
 
-For releasing, after the PR is merged, create a tag with the last commit from master and 
+For releasing, after the PR is merged, create a tag with the last commit from master and
 push it to the repository, for example:
 
 ```sh
@@ -85,19 +86,17 @@ OmniSci Data Science package installs OmniSci stack that includes intake/intake-
 
 Follow the instructions below for your current setup:
 
-**If you have no conda installed on your machine**  
+**If you have no conda installed on your machine**
 IMPORTANT: If you already have conda installed, this will overwrite the conda path in your bash profile! If you really want to run the following instructions, you probably want to create first a backup of your configuration files (for example, `$HOME/.bashrc`, `$HOME/.bash_profile`, `$HOME/.zshrc`, according to your environment). Otherwise, check the instructions in the sections below.
 
-The OmniSci Data Science Installer can be installed using a shell script if you have no conda on your machine. The shell installers for each version of the package are available on the GitHub  [releases page](https://github.com/Quansight/omnisci-datascience-installer/releases/). For each release, you will find both a MacOS package (`pkg`) and a shell (`sh`) installer. 
+The OmniSci Data Science Installer can be installed using a shell script if you have no conda on your machine. The shell installers for each version of the package are available on the GitHub  [releases page](https://github.com/Quansight/omnisci-datascience-installer/releases/). For each release, you will find a shell (`sh`) installer.
 
-
-NOTE: The MacOS package (`pkg`) installer is still being tested.
 
 To run the shell installer:
 
 First, download the shell package (`omnisci-<release_ver>-MacOSX-x86_64.sh`) `omnisci-datascience-installer` [release page](https://github.com/Quansight/omnisci-datascience-installer/releases/) and add execution permission to it:
 
-Download the installer and ensure that you have execution permission for the package. 
+Download the installer and ensure that you have execution permission for the package.
 ```sh
 wget https://github.com/Quansight/omnisci-datascience-installer/releases/download/0.0.2/omnisci-0.0.2-MacOSX-x86_64.sh
 chmod +x omnisci-0.0.2-MacOSX-x86_64.sh
@@ -116,22 +115,22 @@ Otherwise, you can execute the shell script with no flags:
 
 You can scroll through the license agreement by hitting enter or spacebar. If you'd like to skip to the end, you can select `q`
 
-Once you have agreed the the license agreement and the install location, the installer will unpack all the required packages into the the install location. 
+Once you have agreed the the license agreement and the install location, the installer will unpack all the required packages into the the install location.
 
-You will see that your `bash` profile has been modified to include the conda path. In order to utilize conda, you'll need to either close and reopen your terminal, or you can source this updated file.  
+You will see that your `bash` profile has been modified to include the conda path. In order to utilize conda, you'll need to either close and reopen your terminal, or you can source this updated file.
 
 ```sh
 source .bash_profile
 ```
 
-You have successfully installed the OmniSci Datascience Installer on your Mac in the `base` conda environment. This environment has already been activated for you. You are now ready to run some examples! 
+You have successfully installed the OmniSci Datascience Installer on your Mac in the `base` conda environment. This environment has already been activated for you. You are now ready to run some examples!
 
 
 **If you already have conda installed:**
 
-If you already have Conda installed on your Mac, you can create the OmniSci environment directly. These instructions provide the zip example, but you could also use git commands to download the repository. 
+If you already have Conda installed on your Mac, you can create the OmniSci environment directly. These instructions provide the zip example, but you could also use git commands to download the repository.
 
-Download the repository. A separate zip file is available for each version (e.g. we're downloading v0.1.0 here). 
+Download the repository. A separate zip file is available for each version (e.g. we're downloading v0.1.0 here).
 
 ```sh
 wget https://github.com/Quansight/omnisci-examples/archive/v0.1.0.zip
@@ -142,7 +141,7 @@ unzip v0.1.0.zip
 cd omnisci-examples-0.1.0
 ```
 
-Create a new conda environment. This will download all the necessary packages. 
+Create a new conda environment. This will download all the necessary packages.
 ```sh
 conda env create -f environment.yml -n omnisci
 ```
@@ -150,7 +149,7 @@ Activate the new enviroment (requires you to have run `conda init`)
 ```sh
 conda activate omnisci
 ```
-You have successfully installed the OmniSci Datascience Installer on your Mac in the `omnisci` conda environment. You are now ready to run some examples! 
+You have successfully installed the OmniSci Datascience Installer on your Mac in the `omnisci` conda environment. You are now ready to run some examples!
 
 
 
@@ -192,9 +191,9 @@ import ibis
 client = ibis.omniscidb.connect(
     host="localhost",
     port="16274",
-    database="omnisci", 
+    database="omnisci",
     user="admin",
-    password="HyperInteractive", 
+    password="HyperInteractive",
 )
 # get the name of all tables available
 client.list_tables()

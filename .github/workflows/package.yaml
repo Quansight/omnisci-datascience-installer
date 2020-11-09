@@ -28,7 +28,7 @@ jobs:
         sudo sysctl -w kern.maxfiles=204800
         sudo sysctl -w kern.maxfilesperproc=245670
 
-    - uses: conda-incubator/setup-miniconda@v1
+    - uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
         python-version: ${{ matrix.python-version }}
@@ -41,13 +41,13 @@ jobs:
         conda install -y constructor conda-build
         wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
 
-    - name: run constructor for pkg
-      id: pkg_name
-      shell: bash -l {0}
-      run: |
-        constructor --conda-exe conda.exe constructor/pkg
-        PKG_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
-        echo "::set-output name=filename::$PKG_NAME"
+    # - name: run constructor for pkg
+    #   id: pkg_name
+    #   shell: bash -l {0}
+    #   run: |
+    #     constructor --conda-exe conda.exe constructor/pkg
+    #     PKG_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
+    #     echo "::set-output name=filename::$PKG_NAME"
 
     - name: run constructor for sh
       id: sh_name
@@ -60,16 +60,22 @@ jobs:
     - name: test shell package
       run: |
         bash ${{ steps.sh_name.outputs.filename }} -b
-        /Users/runner/omnisci/bin/python -c "import ibis.omniscidb"
-        /Users/runner/omnisci/bin/python -c "import pymapd"
-        /Users/runner/omnisci/bin/python -c "import intake"
-        /Users/runner/omnisci/bin/python -c "import altair"
-        /Users/runner/omnisci/bin/python -c "import ibis_vega_transform"
-        /Users/runner/omnisci/bin/python -c "import geoviews"
-        /Users/runner/omnisci/bin/python -c "import holoviews"
-        /Users/runner/omnisci/bin/python -c "import graphviz"
-        /Users/runner/omnisci/bin/python -c "import pydot"
-        /Users/runner/omnisci/bin/python -c "from ibis.expr.operations import RowID"
+        source conda_activate.sh
+        python -c "import ibis.omniscidb"
+        python -c "import pymapd"
+        python -c "import intake"
+        python -c "import altair"
+        python -c "import ibis_vega_transform"
+        python -c "import geoviews"
+        python -c "import holoviews"
+        python -c "import graphviz"
+        python -c "import pydot"
+        python -c "from ibis.expr.operations import RowID"
+        # install nbconvert for the tests
+        conda install -y nbconvert
+        # run notebook tests
+        bash test_notebooks.sh
+
 
     - name: create release
       id: create_release
@@ -83,7 +89,8 @@ jobs:
         tag: ${{ github.event.release.tag_name }}
         name: Release ${{ github.event.release.tag_name }}
         commit: master
-        artifacts: ${{ steps.pkg_name.outputs.filename }},${{ steps.sh_name.outputs.filename }}
+        # artifacts: ${{ steps.pkg_name.outputs.filename }},${{ steps.sh_name.outputs.filename }}
+        artifacts: ${{ steps.sh_name.outputs.filename }}
         artifactContentType: application/octet-stream
         body: Release ${{ github.event.release.tag_name }}
         token: ${{ secrets.GITHUB_TOKEN }}

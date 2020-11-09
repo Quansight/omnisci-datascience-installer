@@ -1,0 +1,29 @@
+channels:
+  - quansight/label/omnisci
+  - conda-forge
+dependencies:
+  - altair
+  - bokeh
+  - conda
+  - geoviews
+  - quansight/label/omnisci::hvplot
+  - quansight/label/omnisci::holoviews
+  - ibis-framework >=1.4
+  - intake >=0.5.3
+  - jaeger
+  - jupyterlab >=2.2
+  - jupyter-jaeger
+  - nodejs >=12
+  - notebook
+  - omnisci-pytools
+  - pandas
+  - pip
+  # pyarrow 0.15.1 is raising an error: Library not loaded: @rpath/libprotobuf.22.dylib
+  - pyarrow 0.15.0
+  - pydot
+  - pymapd >=0.24
+  - python 3.7.*
+  - rbc >=0.4
+  - pip:
+    - intake-omnisci
+    - ibis-vega-transform
