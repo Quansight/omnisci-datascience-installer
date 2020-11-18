@@ -25,5 +25,7 @@ dependencies:
   - python 3.7.*
   - rbc >=0.4
   - pip:
+    # as it is not recognized by conda constructor
+    # it should installed by post-install.sh
     - intake-omnisci
     - ibis-vega-transform
