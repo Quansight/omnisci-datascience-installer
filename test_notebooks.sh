@@ -24,6 +24,10 @@ do
         [ "$f" == "${NOTEBOOK_DIR}/02_Querying_Data.ipynb" ] || \
         [ "$f" == "${NOTEBOOK_DIR}/04_Advanced-Using_UDFs_and_UDTFs.ipynb" ] || \
         [ "$f" == "${NOTEBOOK_DIR}/workshop/User_Defined_Algorithms_on_Big_Data.ipynb" ] \
+        # pymapd has problems to deal with some data from demo_vote_clean table
+        # 'utf-8' codec can't decode byte
+        [ "$f" == "${NOTEBOOK_DIR}/workshop/Altair_Ibis_Vega_for_Interactive_Exploration.ipynb" ] || \
+        [ "$f" == "${NOTEBOOK_DIR}/workshop/Connecting_Holoviz_Visualization_Ecosystem_to_OmniSci_part_1.ipynb" ] \
     ; then
         echo "[II] Skipping ${f}"
         continue;

@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - altair
+  - arrow-cpp 0.15.0
   - bokeh
   - conda
   - geoviews
