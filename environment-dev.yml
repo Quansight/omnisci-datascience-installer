@@ -4,3 +4,4 @@ dependencies:
   - python
   - rever
   - constructor
+  - pip

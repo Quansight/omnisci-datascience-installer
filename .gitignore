@@ -136,3 +136,6 @@ dmypy.json
 # deployment
 rever/*
 
+# temporary folders for tests
+omnisci-examples
+tmp

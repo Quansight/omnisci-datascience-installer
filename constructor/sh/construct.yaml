@@ -6,7 +6,7 @@ keep_pkgs: True
 attempt_hardlinks: True
 ignore_duplicate_files: True
 install_in_dependency_order: True
-installer_type: sh  # [osx]
+installer_type: sh
 
 channels:
   - https://conda.anaconda.org/quansight/label/omnisci
@@ -15,21 +15,6 @@ channels:
 
 license_file: ../license.txt
 
-specs:
-  - intake >=0.5.3
-  - intake-omnisci
-  - geoviews
-  - omnisci-pytools
-  - jupyter-jaeger
-  - pandas <0.26
-  - pydot
-  - pymapd
-  - pyarrow 0.15
-  - python >=3.7
-  - jupyterlab >=2.2
-  # local depencencies
-  - ibis-framework >=1.3.1
-  - holoviews 1.13.4
-  - hvplot 0.6.0
+environment_file: ../environment.yaml
 
-post_install: ../post-install.sh  # [osx]
+post_install: ../post-install.sh
