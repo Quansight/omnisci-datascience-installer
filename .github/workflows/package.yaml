@@ -72,11 +72,12 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
-        # install nbconvert for the tests
-        conda install -y nbconvert
+        # install nbmake for the tests
+        pip install nbmake
         # run notebook tests
-        bash test_notebooks.sh
-
+        pytest --nbmake -vv \
+          omnisci-examples/notebooks/*.ipynb \
+          omnisci-examples/notebooks/**/*.ipynb
 
     - name: create release
       id: create_release
