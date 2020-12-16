@@ -58,6 +58,9 @@ jobs:
         SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
         echo "::set-output name=filename::$SH_NAME"
 
+    - name: start docker compose for tests
+      run: docker-compose start
+
     - name: test shell package
       run: |
         bash ${{ steps.sh_name.outputs.filename }} -b
@@ -80,6 +83,9 @@ jobs:
         pytest --nbmake -vv \
           omnisci-examples/notebooks/*.ipynb \
           omnisci-examples/notebooks/**/*.ipynb
+
+    - name: tests tear down
+      run: docker-compose stop
 
     - name: create release
       id: create_release
