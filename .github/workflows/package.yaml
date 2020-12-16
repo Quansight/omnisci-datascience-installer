@@ -42,6 +42,11 @@ jobs:
         conda install -y constructor conda-build
         wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
 
+    - name: start docker compose for tests
+      run: |
+        pip install docker-compose
+        /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose start
+
     # - name: run constructor for pkg
     #   id: pkg_name
     #   shell: bash -l {0}
@@ -57,11 +62,6 @@ jobs:
         constructor --conda-exe conda.exe constructor/sh
         SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
         echo "::set-output name=filename::$SH_NAME"
-
-    - name: start docker compose for tests
-      run: |
-        pip install docker-compose
-        docker-compose start
 
     - name: test shell package
       run: |
@@ -87,7 +87,7 @@ jobs:
           omnisci-examples/notebooks/**/*.ipynb
 
     - name: tests tear down
-      run: docker-compose stop
+      run: /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose stop
 
     - name: create release
       id: create_release
