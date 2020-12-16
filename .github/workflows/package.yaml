@@ -85,7 +85,9 @@ jobs:
           omnisci-examples/notebooks/**/*.ipynb
 
     - name: tests tear down
-      run: docker-compose stop
+      run: |
+        pip install docker-compose
+        docker-compose stop
 
     - name: create release
       id: create_release
