@@ -59,7 +59,9 @@ jobs:
         echo "::set-output name=filename::$SH_NAME"
 
     - name: start docker compose for tests
-      run: docker-compose start
+      run: |
+        pip install docker-compose
+        docker-compose start
 
     - name: test shell package
       run: |
@@ -85,9 +87,7 @@ jobs:
           omnisci-examples/notebooks/**/*.ipynb
 
     - name: tests tear down
-      run: |
-        pip install docker-compose
-        docker-compose stop
+      run: docker-compose stop
 
     - name: create release
       id: create_release
