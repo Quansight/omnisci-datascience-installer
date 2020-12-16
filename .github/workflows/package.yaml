@@ -72,6 +72,8 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
+        # download the omnisci-example repo
+        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
         # install nbmake for the tests
         pip install nbmake
         # run notebook tests
