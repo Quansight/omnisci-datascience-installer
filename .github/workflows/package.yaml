@@ -45,7 +45,10 @@ jobs:
     - name: start docker compose for tests
       run: |
         pip install docker-compose
-        /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose start
+        # download the omnisci-example repo
+        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
+        # start services
+        cd omnisci-examples && /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose start
 
     # - name: run constructor for pkg
     #   id: pkg_name
@@ -77,8 +80,6 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
-        # download the omnisci-example repo
-        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
         # install nbmake for the tests
         pip install nbmake
         # run notebook tests
@@ -87,7 +88,8 @@ jobs:
           omnisci-examples/notebooks/**/*.ipynb
 
     - name: tests tear down
-      run: /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose stop
+      run: |
+        cd omnisci-examples && /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose stop
 
     - name: create release
       id: create_release
