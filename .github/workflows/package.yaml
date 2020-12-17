@@ -31,17 +31,15 @@ jobs:
 
     - uses: docker-practice/actions-setup-docker@master
       with:
-        docker_channel: nightly
-        # this value please see https://github.com/AkihiroSuda/moby-snapshot/releases
-        docker_nightly_version: snapshot-20201109
+        docker_channel: stable
+        docker_version: 20.10
 
     - name: start docker compose for tests
       run: |
-        pip install docker-compose
         # download the omnisci-example repo
         git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
         # start services
-        cd omnisci-examples && /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose start
+        cd omnisci-examples && docker-compose start
 
     - uses: conda-incubator/setup-miniconda@v2
       with:
