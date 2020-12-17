@@ -29,6 +29,20 @@ jobs:
         sudo sysctl -w kern.maxfiles=204800
         sudo sysctl -w kern.maxfilesperproc=245670
 
+    - uses: docker-practice/actions-setup-docker@master
+      with:
+        docker_channel: nightly
+        # this value please see https://github.com/AkihiroSuda/moby-snapshot/releases
+        docker_nightly_version: snapshot-20201109
+
+    - name: start docker compose for tests
+      run: |
+        pip install docker-compose
+        # download the omnisci-example repo
+        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
+        # start services
+        cd omnisci-examples && /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose start
+
     - uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
@@ -41,14 +55,6 @@ jobs:
       run: |
         conda install -y constructor conda-build
         wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
-
-    - name: start docker compose for tests
-      run: |
-        pip install docker-compose
-        # download the omnisci-example repo
-        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
-        # start services
-        cd omnisci-examples && /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose start
 
     # - name: run constructor for pkg
     #   id: pkg_name
