@@ -39,7 +39,7 @@ jobs:
         # download the omnisci-example repo
         git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
         # start services
-        cd omnisci-examples && docker-compose start
+        cd omnisci-examples && docker-compose up -d
 
     - uses: conda-incubator/setup-miniconda@v2
       with:
