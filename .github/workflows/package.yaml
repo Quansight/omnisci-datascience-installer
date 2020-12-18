@@ -58,21 +58,6 @@ jobs:
         SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
         echo "::set-output name=filename::$SH_NAME"
 
-    - uses: docker-practice/actions-setup-docker@master
-      with:
-        docker_channel: stable
-        docker_version: 20.10
-
-    - name: start docker compose for tests
-      run: |
-        # download the omnisci-example repo
-        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
-        # start services
-        cd omnisci-examples
-        docker-compose up -d
-        sleep 20
-        docker-compose logs
-
     - name: test shell package
       run: |
         bash ${{ steps.sh_name.outputs.filename }} -b
@@ -87,6 +72,27 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
+
+    - name: download omnisci-example repo
+      run: git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
+
+    - uses: docker-practice/actions-setup-docker@master
+      with:
+        docker_channel: stable
+        docker_version: 20.10
+
+    - name: start docker compose for tests
+      run: |
+        # start services
+        cd omnisci-examples
+        docker-compose up -d
+        sleep 20
+        docker-compose logs
+
+    - name: test omnisci-examples notebook
+      run: |
+        # activate the package environment
+        source conda_activate.sh
         # install nbmake for the tests
         pip install nbmake
         # run notebook tests
