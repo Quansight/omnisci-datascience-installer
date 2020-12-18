@@ -29,18 +29,6 @@ jobs:
         sudo sysctl -w kern.maxfiles=204800
         sudo sysctl -w kern.maxfilesperproc=245670
 
-    - uses: docker-practice/actions-setup-docker@master
-      with:
-        docker_channel: stable
-        docker_version: 20.10
-
-    - name: start docker compose for tests
-      run: |
-        # download the omnisci-example repo
-        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
-        # start services
-        cd omnisci-examples && docker-compose up -d
-
     - uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
@@ -70,6 +58,18 @@ jobs:
         SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
         echo "::set-output name=filename::$SH_NAME"
 
+    - uses: docker-practice/actions-setup-docker@master
+      with:
+        docker_channel: stable
+        docker_version: 20.10
+
+    - name: start docker compose for tests
+      run: |
+        # download the omnisci-example repo
+        git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
+        # start services
+        cd omnisci-examples && docker-compose up -d
+
     - name: test shell package
       run: |
         bash ${{ steps.sh_name.outputs.filename }} -b
@@ -88,12 +88,12 @@ jobs:
         pip install nbmake
         # run notebook tests
         pytest --nbmake -vv \
-          omnisci-examples/notebooks/*.ipynb \
-          omnisci-examples/notebooks/**/*.ipynb
+          --ignore=omnisci-examples/notebooks/01_Introduction.ipynb \
+          --ignore=omnisci-examples/notebooks/additional_examples/A01_Getting_Started_OmniSciDB_and_Ibis.ipynb
 
     - name: tests tear down
       run: |
-        cd omnisci-examples && /Library/Frameworks/Python.framework/Versions/2.7/bin/docker-compose stop
+        cd omnisci-examples && docker-compose stop
 
     - name: create release
       id: create_release
