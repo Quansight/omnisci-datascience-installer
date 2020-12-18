@@ -68,7 +68,10 @@ jobs:
         # download the omnisci-example repo
         git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
         # start services
-        cd omnisci-examples && docker-compose up -d
+        cd omnisci-examples
+        docker-compose up -d
+        sleep 20
+        docker-compose logs
 
     - name: test shell package
       run: |
@@ -87,13 +90,15 @@ jobs:
         # install nbmake for the tests
         pip install nbmake
         # run notebook tests
+        cd omnisci-examples
         pytest --nbmake -vv \
-          --ignore=omnisci-examples/notebooks/01_Introduction.ipynb \
-          --ignore=omnisci-examples/notebooks/additional_examples/A01_Getting_Started_OmniSciDB_and_Ibis.ipynb
+          --ignore=notebooks/01_Introduction.ipynb \
+          --ignore=notebooks/additional_examples/A01_Getting_Started_OmniSciDB_and_Ibis.ipynb
 
     - name: tests tear down
       run: |
-        cd omnisci-examples && docker-compose stop
+        cd omnisci-examples
+        docker-compose stop
 
     - name: create release
       id: create_release
