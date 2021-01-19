@@ -9,6 +9,7 @@ $ACTIVITIES = [
 $VERSION_BUMP_PATTERNS = [
     ('constructor/pkg/construct.yaml', r'version\s*:.*', "version: $VERSION"),
     ('constructor/sh/construct.yaml', r'version\s*:.*', "version: $VERSION"),
+    ('conda/meta.yaml', r'\{\%\s*set\s+version\s*=\s*.*\s*\%\}', "{% set version = $VERSION %}"),
 ]
 
 $PUSH_TAG_REMOTE = 'git@github.com:Quansight/omnisci-datascience-installer.git'  # Repo to push tags to
