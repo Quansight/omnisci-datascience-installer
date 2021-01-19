@@ -10,10 +10,6 @@ build:
   number: 0
 
 requirements:
-  host:
-    - python >=3.7
-    - pip
-    - git
   run:
     - altair
     - arrow-cpp
@@ -57,7 +53,7 @@ about:
   license: Other
   license_family: Other
   license_file: ../constructor/license.txt
-  summary: 'OmniSci Plugin for Intake'
+  summary: 'OmniSci Data Science Tools'
 
 extra:
   recipe-maintainers:
