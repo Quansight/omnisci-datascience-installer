@@ -43,7 +43,8 @@ jobs:
       #       but for now we need it running for 'push'
       #       when the first package is ready on anaconda quansight channel
       #       it should be changed to 'ref/tags/'
-      if: startsWith(github.ref, 'push')
+      # if: startsWith(github.ref, 'refs/tags/')
+      if: startsWith(github.event_name, 'push')
       env:
         ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
       run: |
