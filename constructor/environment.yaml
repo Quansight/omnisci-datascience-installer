@@ -8,6 +8,7 @@ dependencies:
   - conda
   - geoviews
   - quansight/label/omnisci::hvplot
+  - quansight/label/omnisci::omnisci-examples
   - holoviews >= 1.14.0
   - ibis-framework >=1.4
   - intake >=0.5.3
