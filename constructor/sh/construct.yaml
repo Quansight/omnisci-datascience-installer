@@ -7,7 +7,7 @@ attempt_hardlinks: True
 ignore_duplicate_files: True
 install_in_dependency_order: True
 installer_type: sh
-default_prefix: "${USERPROFILE}\${NAME}\Library/Application\ Support/OmniSci/"  # [osx]
+default_prefix: "${HOME}/Library/Application\ Support/OmniSci/"  # [osx]
 
 channels:
   - https://conda.anaconda.org/quansight/label/omnisci
