@@ -39,6 +39,7 @@ jobs:
       run: conda-build conda -c quansight/label/omnisci
 
     - name: release to the quansight conda channel
+      shell: bash -l {0}
       # NOTE: it should run just for 'ref/tags/',
       #       but for now we need it running for 'push'
       #       when the first package is ready on anaconda quansight channel
