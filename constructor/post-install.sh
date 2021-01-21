@@ -10,7 +10,3 @@ jupyter labextension install ibis-vega-transform
 jupyter labextension install @pyviz/jupyterlab_pyviz
 
 export PATH=${OLD_PATH}
-
-USER_NOTEBOOKS_DIR=${HOME}/Documents/omnisci-datascience/notebooks
-mkdir -p ${USER_NOTEBOOKS_DIR}
-ln -s ${PREFIX}/opt/omnisci/notebooks ${USER_NOTEBOOKS_DIR}
