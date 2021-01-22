@@ -17,5 +17,3 @@ channels:
 license_file: ../license.txt
 
 environment_file: ../environment.yaml
-
-post_install: ../post-install.sh
