@@ -62,7 +62,7 @@ jobs:
       run: |
         bash ${{ steps.sh_name.outputs.filename }} -b
         source conda_activate.sh
-        python -c "import ibis.omniscidb"
+        python -c "import ibis"
         python -c "import pymapd"
         python -c "import intake"
         python -c "import altair"
