@@ -17,8 +17,8 @@ requirements:
     - geoviews
     - hvplot
     - holoviews >=1.14.0
-    - ibis-vega-transform
     - ibis-framework >=1.4
+    - ibis-vega-transform
     - intake >=0.5.3
     - intake-omnisci
     - jaeger
