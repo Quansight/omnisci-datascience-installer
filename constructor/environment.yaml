@@ -11,7 +11,6 @@ dependencies:
   - quansight/label/omnisci::omnisci-examples
   - holoviews >= 1.14.0
   - ibis-framework >=1.4
-  - ibis-vega-transform
   - intake >=0.5.3
   - intake-omnisci
   - jaeger
@@ -28,3 +27,7 @@ dependencies:
   - pymapd >=0.24
   - python 3.7.*
   - rbc >=0.4
+  - pip:
+    # as it is not recognized by conda constructor	
+    # it should installed by post-install.sh
+    - ibis-vega-transform
