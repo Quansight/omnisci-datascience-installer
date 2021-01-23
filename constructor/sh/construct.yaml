@@ -5,7 +5,7 @@ company: OmniSci, Inc.
 keep_pkgs: True
 ignore_duplicate_files: True
 installer_type: sh
-default_prefix: "$HOME/Documents/omnisci"
+# default_prefix: "$HOME/Documents/omnisci"
 
 channels:
   - https://conda.anaconda.org/quansight/label/omnisci
