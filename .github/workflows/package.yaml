@@ -11,7 +11,7 @@ jobs:
   macos:
 
     runs-on: macos-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     strategy:
       matrix:
         python-version: [3.7]
@@ -62,7 +62,7 @@ jobs:
       run: |
         bash ${{ steps.sh_name.outputs.filename }} -b
         source conda_activate.sh
-        python -c "import ibis.omniscidb"
+        python -c "import ibis"
         python -c "import pymapd"
         python -c "import intake"
         python -c "import altair"
@@ -72,11 +72,14 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
+        
+    - name: test notebooks
+      run: |
+        source conda_activate.sh
         # install nbconvert for the tests
         conda install -y nbconvert
         # run notebook tests
         bash test_notebooks.sh
-
 
     - name: create release
       id: create_release

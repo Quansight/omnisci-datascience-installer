@@ -3,7 +3,6 @@
 export OLD_PATH=$PREFIX
 export PATH=$PREFIX/bin:$PATH
 
-pip install intake-omnisci
 pip install ibis-vega-transform
 
 jupyter labextension install ibis-vega-transform
