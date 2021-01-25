@@ -1,4 +1,4 @@
-name: packaging
+name: constructor
 
 on:
   push:
@@ -58,9 +58,11 @@ jobs:
         SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
         echo "::set-output name=filename::$SH_NAME"
 
-    - name: test shell package
+    - name: install sh package
+      run: bash ${{ steps.sh_name.outputs.filename }} -b
+
+    - name: test imports
       run: |
-        bash ${{ steps.sh_name.outputs.filename }} -b
         source conda_activate.sh
         python -c "import ibis"
         python -c "import pymapd"
@@ -72,7 +74,7 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
-        
+
     - name: test notebooks
       run: |
         source conda_activate.sh
