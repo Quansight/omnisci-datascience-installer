@@ -16,7 +16,7 @@ dependencies:
   - jaeger
   - jupyterlab >=2.2,<3
   - jupyter-jaeger
-  - nodejs >=12
+  - nodejs >=12,<15
   - notebook
   - omnisci-pytools
   - pandas
@@ -28,6 +28,6 @@ dependencies:
   - python 3.7.*
   - rbc >=0.4
   - pip:
-    # as it is not recognized by conda constructor	
+    # as it is not recognized by conda constructor
     # it should installed by post-install.sh
     - ibis-vega-transform
