@@ -3,18 +3,16 @@ version: 0.0.9
 company: OmniSci, Inc.
 
 keep_pkgs: True
-attempt_hardlinks: True
 ignore_duplicate_files: True
-install_in_dependency_order: True
 installer_type: pkg  # [osx]
+default_prefix: "$HOME/Documents/omnisci"  # [osx]
 
 channels:
   - https://conda.anaconda.org/quansight/label/omnisci
   - https://conda.anaconda.org/conda-forge
-  - http://repo.anaconda.com/pkgs/main/
 
 license_file: ../license.txt
 
 environment_file: ../environment.yaml
 
-post_install: ../post-install.sh  # [osx]
+post_install: ../post-install.sh

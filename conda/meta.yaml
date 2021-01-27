@@ -12,7 +12,7 @@ build:
 requirements:
   run:
     - altair
-    - arrow-cpp
+    - arrow-cpp 0.15.0
     - bokeh
     - geoviews
     - hvplot
@@ -24,12 +24,13 @@ requirements:
     - jaeger
     - jupyterlab >=2.2,<3
     - jupyter-jaeger
-    - nodejs >=12
+    - nodejs >=12,<15
     - notebook
     - omnisci-pytools
     - pandas
     - pip
-    - pyarrow
+    # pyarrow 0.15.1 is raising an error: Library not loaded: @rpath/libprotobuf.22.dylib
+    - pyarrow 0.15.0
     - pydot
     - pymapd >=0.24
     - pytest
