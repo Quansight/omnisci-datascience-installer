@@ -5,6 +5,9 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+source:
+  git_url: ../
+
 build:
   noarch: generic
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
