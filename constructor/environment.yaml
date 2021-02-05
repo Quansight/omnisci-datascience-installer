@@ -31,3 +31,4 @@ dependencies:
     # as it is not recognized by conda constructor
     # it should installed by post-install.sh
     - ibis-vega-transform
+    - jaeger-browser

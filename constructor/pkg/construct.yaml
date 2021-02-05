@@ -5,7 +5,7 @@ company: OmniSci, Inc.
 keep_pkgs: True
 ignore_duplicate_files: True
 installer_type: pkg  # [osx]
-default_prefix: "$HOME/Documents/omnisci"  # [osx]
+default_prefix: "$HOME/Documents/omnisci-datascience"  # [osx]
 
 channels:
   - https://conda.anaconda.org/quansight/label/omnisci
