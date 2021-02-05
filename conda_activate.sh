@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-ENV_PATH=${HOME}/Documents/omnisci-datascience
+ENV_PATH=${HOME}/omnisci-datascience
 CONDA_PATH=${ENV_PATH}/bin/conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
