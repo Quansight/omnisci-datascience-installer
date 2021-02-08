@@ -94,11 +94,11 @@ The OmniSci Data Science Installer can be installed using a shell script if you 
 
 To run the shell installer:
 
-First, download the shell package (`omnisci-<release_ver>-MacOSX-x86_64.sh`) `omnisci-datascience-installer` [release page](https://github.com/Quansight/omnisci-datascience-installer/releases/) and add execution permission to it:
+First, download the shell package (`omnisci-datascience-<release_ver>-MacOSX-x86_64.sh`) `omnisci-datascience-installer` [release page](https://github.com/Quansight/omnisci-datascience-installer/releases/) and add execution permission to it:
 
-Download the installer and ensure that you have execution permission for the package.
+Download the installer and ensure that you have execution permission for the package, for example:
 ```sh
-wget https://github.com/Quansight/omnisci-datascience-installer/releases/download/0.0.2/omnisci-0.0.2-MacOSX-x86_64.sh
+wget https://github.com/Quansight/omnisci-datascience-installer/releases/download/0.1.3/omnisci-datascience-0.1.3-MacOSX-x86_64.sh
 chmod +x omnisci-0.0.2-MacOSX-x86_64.sh
 ```
 
