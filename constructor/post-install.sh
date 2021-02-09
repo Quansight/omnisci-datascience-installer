@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# FORCING PREFIX
+export PREFIX=${HOME}/omnisci-datascience
+
 export OLD_PATH=${PREFIX}
 export PATH=${PREFIX}/bin:${PATH}
 
