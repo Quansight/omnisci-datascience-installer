@@ -2,14 +2,10 @@
 set -ex
 
 PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
-OMNISCI_EXAMPLE_DIR=${PROJECT_DIR}/omnisci-examples
+OMNISCI_EXAMPLE_DIR=${HOME}/Documents/omnisci-examples
 NOTEBOOK_DIR=${OMNISCI_EXAMPLE_DIR}/notebooks
 NBCONVERT=${CONDA_PREFIX}/bin/jupyter-nbconvert
 OUTPUT_DIR=${PROJECT_DIR}/tmp
-
-# force a fresh copy of the omnisci-examples repository
-rm -rf ${OMNISCI_EXAMPLE_DIR}
-git clone --depth 1 https://github.com/Quansight/omnisci-examples.git
 
 mkdir -p tmp
 
