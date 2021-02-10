@@ -75,15 +75,13 @@ jobs:
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
 
-    # NOTE: tests will be skipped for now, until we have local
-    #       omniscidb working on CI.
-    # - name: test notebooks
-    #   run: |
-    #     source conda_activate.sh
-    #     # install nbconvert for the tests
-    #     conda install -y nbconvert
-    #     # run notebook tests
-    #     bash test_notebooks.sh
+    - name: test notebooks
+      run: |
+        source conda_activate.sh
+        # install nbconvert for the tests
+        conda install -y nbconvert
+        # run notebook tests
+        bash test_notebooks.sh
 
     - name: create release
       id: create_release
