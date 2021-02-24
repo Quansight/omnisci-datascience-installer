@@ -6,7 +6,7 @@ export PREFIX=${HOME}/omnisci-datascience
 export OLD_PATH=${PREFIX}
 export PATH=${PREFIX}/bin:${PATH}
 
-${PREFIX}/bin/pip install ibis-vega-transform jaeger-browser
+${PREFIX}/bin/pip install ibis-vega-transform
 
 ${PREFIX}/bin/jupyter labextension install ibis-vega-transform
 ${PREFIX}/bin/jupyter labextension install @pyviz/jupyterlab_pyviz
