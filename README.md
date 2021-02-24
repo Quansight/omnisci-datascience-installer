@@ -29,7 +29,7 @@ another name if you want) and installs the packages listed in `environment-dev.y
    For example:
 
 ```sh
-wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe
+wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
 ```
 
 3. On Mac, building pkg installers can often result in using too many file handles.
@@ -51,7 +51,8 @@ sudo sysctl -w kern.maxfilesperproc=245670
 Now you may run constructor with the following command:
 
 ```sh
-constructor --conda-exe /path/to/conda.exe constructor/sh
+# constructor --conda-exe /path/to/conda.exe constructor/sh
+constructor --conda-exe conda.exe constructor/sh
 ```
 
 Be aware that, on Mac, whether you are creating a sh-based or pkg-based installer
