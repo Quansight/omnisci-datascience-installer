@@ -14,6 +14,7 @@ dependencies:
   - intake >=0.5.3
   - intake-omnisci
   - jaeger
+  - jaeger-browser
   - jupyterlab >=2.2,<3
   - jupyter-jaeger
   - nodejs >=12,<15
@@ -31,4 +32,3 @@ dependencies:
     # as it is not recognized by conda constructor
     # it should installed by post-install.sh
     - ibis-vega-transform
-    - jaeger-browser
