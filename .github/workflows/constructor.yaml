@@ -23,10 +23,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: configure
+    - name: configure ulimit
+      shell: bash -l {0}
+      run: ulimit -S -n 204800
+
+    - name: configure maxfiles
+      if: matrix.os == 'macos-latest'
       shell: bash -l {0}
       run: |
-        ulimit -S -n 204800
         sudo sysctl -w kern.maxfiles=204800
         sudo sysctl -w kern.maxfilesperproc=245670
 
