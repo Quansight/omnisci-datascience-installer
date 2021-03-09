@@ -19,7 +19,7 @@ jobs:
 
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
-      OS_NAME: ${{ runner.os }}
+      IMAGE_OS: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v2
@@ -43,7 +43,7 @@ jobs:
       shell: bash -l {0}
       run: |
         conda install -y constructor conda-build
-        if [[ $OS_NAME == 'Linux' ]]; then
+        if [[ $IMAGE_OS == 'ubuntu-latest' ]]; then
           wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-linux-64.exe -O conda.exe
         else
           wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
