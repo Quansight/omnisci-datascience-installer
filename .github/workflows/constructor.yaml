@@ -19,6 +19,7 @@ jobs:
 
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
+      OS_NAME: ${{ runner.os }}
 
     steps:
     - uses: actions/checkout@v2
@@ -42,7 +43,11 @@ jobs:
       shell: bash -l {0}
       run: |
         conda install -y constructor conda-build
-        wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
+        if [[ $OS_NAME == 'Linux' ]]; then
+          wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-linux-64.exe -O conda.exe
+        else
+          wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
+        fi
 
     - name: run constructor for pkg
       id: pkg_name
