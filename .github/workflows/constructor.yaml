@@ -8,21 +8,24 @@ on:
     branches: [ master ]
 
 jobs:
-  macos:
-
-    runs-on: macos-latest
-    timeout-minutes: 120
+  construct:
     strategy:
       matrix:
         python-version: [3.7]
+        os: [macos-latest, ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
 
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
+      IMAGE_OS: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v2
 
     - name: configure
+      if: matrix.os == 'macos-latest'
       shell: bash -l {0}
       run: |
         ulimit -S -n 204800
@@ -40,11 +43,16 @@ jobs:
       shell: bash -l {0}
       run: |
         conda install -y constructor conda-build
-        wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
+        if [[ $IMAGE_OS == 'ubuntu-latest' ]]; then
+          wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-linux-64.exe -O conda.exe
+        else
+          wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
+        fi
 
     - name: run constructor for pkg
       id: pkg_name
       shell: bash -l {0}
+      if: matrix.os == 'macos-latest'
       run: |
         constructor --conda-exe conda.exe constructor/pkg
         PKG_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
@@ -55,7 +63,7 @@ jobs:
       shell: bash -l {0}
       run: |
         constructor --conda-exe conda.exe constructor/sh
-        SH_NAME=$(ls omnisci-*-MacOSX-x86_64.sh)
+        SH_NAME=$(ls omnisci-*.sh)
         echo "::set-output name=filename::$SH_NAME"
 
     - name: install sh package
@@ -83,9 +91,9 @@ jobs:
         # run notebook tests
         bash test_notebooks.sh
 
-    - name: create release
-      id: create_release
-      if: startsWith(github.ref, 'refs/tags/')
+    - name: create release macos
+      id: create_release_macos
+      if: startsWith(github.ref, 'refs/tags/') && matrix.os == 'macos-latest'
       uses: ncipollo/release-action@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -96,6 +104,23 @@ jobs:
         name: Release ${{ github.event.release.tag_name }}
         commit: master
         artifacts: ${{ steps.pkg_name.outputs.filename }},${{ steps.sh_name.outputs.filename }}
+        artifactContentType: application/octet-stream
+        body: Release ${{ github.event.release.tag_name }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: create release linux
+      id: create_release_linux
+      if: startsWith(github.ref, 'refs/tags/') && matrix.os == 'ubuntu-latest'
+      uses: ncipollo/release-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        allowUpdates: true
+        replacesArtifacts: true
+        tag: ${{ github.event.release.tag_name }}
+        name: Release ${{ github.event.release.tag_name }}
+        commit: master
+        artifacts: ${{ steps.sh_name.outputs.filename }}
         artifactContentType: application/octet-stream
         body: Release ${{ github.event.release.tag_name }}
         token: ${{ secrets.GITHUB_TOKEN }}
