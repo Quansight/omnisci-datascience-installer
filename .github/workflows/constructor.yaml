@@ -11,7 +11,7 @@ jobs:
   construct:
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
         os: [macos-latest, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
@@ -21,12 +21,15 @@ jobs:
       PYTHON_VERSION: ${{ matrix.python-version }}
       IMAGE_OS: ${{ matrix.os }}
 
+    defaults:
+      run:
+        shell: bash -l {0}
+
     steps:
     - uses: actions/checkout@v2
 
     - name: configure
       if: matrix.os == 'macos-latest'
-      shell: bash -l {0}
       run: |
         ulimit -S -n 204800
         sudo sysctl -w kern.maxfiles=204800
@@ -40,7 +43,6 @@ jobs:
         channels: quansight/label/omnisci,conda-forge
 
     - name: install dependencies
-      shell: bash -l {0}
       run: |
         conda install -y constructor conda-build
         if [[ $IMAGE_OS == 'ubuntu-latest' ]]; then
@@ -51,7 +53,6 @@ jobs:
 
     - name: run constructor for pkg
       id: pkg_name
-      shell: bash -l {0}
       if: matrix.os == 'macos-latest'
       run: |
         constructor --conda-exe conda.exe constructor/pkg
@@ -60,7 +61,6 @@ jobs:
 
     - name: run constructor for sh
       id: sh_name
-      shell: bash -l {0}
       run: |
         constructor --conda-exe conda.exe constructor/sh
         SH_NAME=$(ls omnisci-*.sh)
@@ -82,6 +82,12 @@ jobs:
         python -c "import graphviz"
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
+
+    - name: Test jupyter-lab extensions
+      run: |
+        source conda_activate.sh
+        jupyter labextension list 2>&1 | grep -ie "jupyter-jaeger.*OK"
+        jupyter labextension list 2>&1 | grep -ie "ibis-vega-transform.*OK"
 
     - name: test notebooks
       run: |
