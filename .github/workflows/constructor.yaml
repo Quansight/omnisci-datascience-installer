@@ -11,7 +11,7 @@ jobs:
   construct:
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
         os: [macos-latest, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
