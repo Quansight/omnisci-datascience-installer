@@ -83,6 +83,11 @@ jobs:
         python -c "import pydot"
         python -c "from ibis.expr.operations import RowID"
 
+    - name: Test jupyter-lab extensions
+      run:
+        jupyter labextension list 2>&1 | grep -ie "jupyter-jaeger.*OK"
+        jupyter labextension list 2>&1 | grep -ie "ibis-vega-transform.*OK"
+
     - name: test notebooks
       run: |
         source conda_activate.sh

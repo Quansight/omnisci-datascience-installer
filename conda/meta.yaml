@@ -49,6 +49,9 @@ test:
     - holoviews
     - graphviz
     - pydot
+  commands:
+    - jupyter labextension list 2>&1 | grep -ie "jupyter-jaeger.*OK"
+    - jupyter labextension list 2>&1 | grep -ie "ibis-vega-transform.*OK"
 
 about:
   home: https://github.com/Quansight/omnisci-datascience-installer
