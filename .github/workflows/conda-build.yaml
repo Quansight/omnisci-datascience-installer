@@ -19,6 +19,10 @@ jobs:
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
 
+    defaults:
+      run:
+        shell: bash -l {0}
+
     steps:
     - uses: actions/checkout@v2
       with:
@@ -32,16 +36,13 @@ jobs:
         channels: quansight/label/omnisci,conda-forge
 
     - name: install dependencies
-      shell: bash -l {0}
       run: |
         conda install -y conda-build anaconda-client
 
     - name: run conda build
-      shell: bash -l {0}
       run: conda-build conda -c quansight/label/omnisci
 
     - name: release to the quansight conda channel
-      shell: bash -l {0}
       # NOTE: it should run just for 'ref/tags/',
       #       but for now we need it running for 'push'
       #       when the first package is ready on anaconda quansight channel
