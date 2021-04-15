@@ -90,6 +90,7 @@ jobs:
         jupyter labextension list 2>&1 | grep -ie "ibis-vega-transform.*OK"
 
     - name: test notebooks with external connection
+      if: matrix.os == 'macos-latest'
       run: |
         source conda_activate.sh
         # install nbconvert for the tests
