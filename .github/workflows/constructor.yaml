@@ -89,13 +89,33 @@ jobs:
         jupyter labextension list 2>&1 | grep -ie "jupyter-jaeger.*OK"
         jupyter labextension list 2>&1 | grep -ie "ibis-vega-transform.*OK"
 
-    - name: test notebooks
+    - name: test notebooks with external connection
       run: |
         source conda_activate.sh
         # install nbconvert for the tests
         conda install -y nbconvert
         # run notebook tests
         bash test_notebooks.sh
+
+    - name: start up omniscidb server
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        source conda_activate.sh
+        cd ${CONDA_PREFIX}/opt/omnisci-examples
+        conda install -y docker-compose
+        docker-compose build omniscidb
+        docker-compose up -d omniscidb
+        sleep 5
+
+    - name: test notebooks with internal connection
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        source conda_activate.sh
+        # install nbconvert for the tests
+        pip install nbmake pytest
+        # run notebook tests
+        cd ${CONDA_PREFIX}/opt/omnisci-examples
+        pytest --nbmake -vv
 
     - name: create release macos
       id: create_release_macos
