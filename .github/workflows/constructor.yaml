@@ -40,29 +40,24 @@ jobs:
         auto-update-conda: true
         python-version: ${{ matrix.python-version }}
         activate-environment: omnisci-ds-installer
-        channels: quansight/label/omnisci,conda-forge
-
-    - name: install dependencies
-      run: |
-        conda install -y constructor conda-build
-        if [[ $IMAGE_OS == 'ubuntu-latest' ]]; then
-          wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-linux-64.exe -O conda.exe
-        else
-          wget https://repo.anaconda.com/pkgs/misc/conda-execs/conda-latest-osx-64.exe -O conda.exe
-        fi
+        channels: conda-forge
+        mamba-version: "*"
+        channel-priority: true
+        use-mamba: true
+        miniforge-varian: Mambaforge
 
     - name: run constructor for pkg
       id: pkg_name
       if: matrix.os == 'macos-latest'
       run: |
-        constructor --conda-exe conda.exe constructor/pkg
+        constructor --conda-exe $(which micromamba) constructor/pkg
         PKG_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
         echo "::set-output name=filename::$PKG_NAME"
 
     - name: run constructor for sh
       id: sh_name
       run: |
-        constructor --conda-exe conda.exe constructor/sh
+        constructor --conda-exe $(which micromamba) constructor/sh
         SH_NAME=$(ls omnisci-*.sh)
         echo "::set-output name=filename::$SH_NAME"
 

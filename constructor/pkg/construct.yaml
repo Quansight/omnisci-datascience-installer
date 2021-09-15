@@ -7,7 +7,6 @@ ignore_duplicate_files: True
 installer_type: pkg  # [osx]
 
 channels:
-  - https://conda.anaconda.org/quansight/label/omnisci
   - https://conda.anaconda.org/conda-forge
 
 license_file: ../license.txt
