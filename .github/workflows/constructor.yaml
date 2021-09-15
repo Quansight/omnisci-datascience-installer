@@ -45,6 +45,7 @@ jobs:
         channel-priority: true
         use-mamba: true
         miniforge-varian: Mambaforge
+        environment-file: environment-dev.yml
 
     - name: run constructor for pkg
       id: pkg_name
