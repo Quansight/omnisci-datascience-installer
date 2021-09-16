@@ -15,7 +15,7 @@ jobs:
         os: [macos-latest, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 120
+    timeout-minutes: 150
 
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
