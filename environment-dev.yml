@@ -3,6 +3,7 @@ channels:
 dependencies:
   - python <3.9
   - rever
-  - constructor
+  # requires https://github.com/conda/constructor/pull/450
+  - ctools/label/dev::constructor
   - pip
   - micromamba
