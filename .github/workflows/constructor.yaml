@@ -51,6 +51,7 @@ jobs:
       id: pkg_name
       if: matrix.os == 'macos-latest'
       run: |
+        which micromamba
         constructor --conda-exe $(which micromamba) constructor/pkg
         PKG_NAME=$(ls omnisci-*-MacOSX-x86_64.pkg)
         echo "::set-output name=filename::$PKG_NAME"
@@ -58,6 +59,7 @@ jobs:
     - name: run constructor for sh
       id: sh_name
       run: |
+        which micromamba
         constructor --conda-exe $(which micromamba) constructor/sh
         SH_NAME=$(ls omnisci-*.sh)
         echo "::set-output name=filename::$SH_NAME"
