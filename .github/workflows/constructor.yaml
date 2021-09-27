@@ -15,7 +15,7 @@ jobs:
         os: [macos-latest, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 120
+    timeout-minutes: 180
 
     env:
       PYTHON_VERSION: ${{ matrix.python-version }}
@@ -40,7 +40,9 @@ jobs:
         auto-update-conda: true
         python-version: ${{ matrix.python-version }}
         activate-environment: omnisci-ds-installer
-        channels: quansight/label/omnisci,conda-forge
+        channels: conda-forge
+        channel-priority: true
+        environment-file: environment-dev.yml
 
     - name: install dependencies
       run: |
